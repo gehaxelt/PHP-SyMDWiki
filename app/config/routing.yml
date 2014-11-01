@@ -1,0 +1,9 @@
+login_check:
+  path: /login_check
+logout:
+  path: /logout
+gehaxelt_sy_md_wiki:
+    resource: "@GehaxeltSyMDWikiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
