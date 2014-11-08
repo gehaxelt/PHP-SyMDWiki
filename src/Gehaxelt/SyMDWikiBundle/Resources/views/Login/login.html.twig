@@ -1,14 +1,29 @@
-{% if error %}
-    <div>{{ error.message }}</div>
-{% endif %}
-
-<form action="{{ path('login_check') }}" method="post">
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="_password" />
-
-    <button type="submit">login</button>
-</form>
+{% extends '::base.html.twig' %}
+{% block title %}Login{% endblock %}
+{% block body %}  
+    <h1>Please login</h1>
+    <hr>
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+    {% endif %}
+    <form action="{{ path('login_check') }}" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="id_username">Username</label>
+                <div class="controls">
+                    <input name="_username" maxlength="100" value="{{ last_username }}" placeholder="Enter your username..." type="text" class="input-large" id="id_username" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="id_password">Password</label>
+                <div class="controls">
+                    <input name="_password" maxlength="100" placeholder="Enter your password..." type="password" class="input-large" id="id_password" />
+                </div>
+            </div>
+            <div class="control-group">
+                <button type="submit">Login</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

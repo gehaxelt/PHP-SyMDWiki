@@ -1,7 +1,8 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-
+    - { resource: services.yml }
+    
 framework:
     #esi:             ~
     #translator:      { fallback: "%locale%" }
@@ -28,6 +29,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        navigation:   "@navigation"
 
 # Assetic Configuration
 assetic:

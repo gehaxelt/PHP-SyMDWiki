@@ -1,0 +1,7 @@
+services:
+  logger:
+    class: Gehaxelt\SyMDWikiBundle\Service\Logger
+    arguments: [@doctrine.orm.entity_manager]
+  navigation:
+    class: Gehaxelt\SyMDWikiBundle\Service\Navigation
+    arguments: [@doctrine.orm.entity_manager]

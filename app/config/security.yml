@@ -14,8 +14,6 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        # default:
-        #     anonymous: ~
         loginarea:
           pattern: ^/login$
           anonymous: ~
@@ -23,11 +21,11 @@ security:
           pattern: ^/
           form_login:
               csrf_provider: form.csrf_provider
-          # logout:       true
-          # anonymous:    true
+          logout:       true
           form_login:
             check_path: /login_check
             login_path: /login
+            target: /entry/
           logout:
             path: /logout
             target: /

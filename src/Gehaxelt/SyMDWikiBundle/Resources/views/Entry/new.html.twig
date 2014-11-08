@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block title %}New Entry{% endblock %}
+{% block navigation %}
+    {% include '::navigation.auth.html.twig' %}
+{% endblock %}
+
+{% block body -%}
+    <h1>New Entry</h1>
+    <hr>
+    {{ form(form) }}
+</ul>
+{% endblock %}

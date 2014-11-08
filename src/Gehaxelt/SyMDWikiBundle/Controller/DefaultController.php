@@ -9,11 +9,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="index")
      * @Template()
      */
     public function indexAction()
     {
-        return array();
+        return $this->redirect($this->generateUrl('entry'));
     }
 }

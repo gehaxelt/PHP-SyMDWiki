@@ -1,9 +1,10 @@
 {% extends '::base.html.twig' %}
-{% block title %}SyMDWiki{% endblock %}
+{% block title %}Delete Logs{% endblock %}
 {% block navigation %}
     {% include '::navigation.auth.html.twig' %}
 {% endblock %}
 
-{% block body %}
-  <h1>Hi</h1>
+{% block body -%}
+  <h1>Delete all logs?</h1>
+  {{ form(delete_form) }}
 {% endblock %}

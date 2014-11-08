@@ -1,0 +1,14 @@
+#header {
+  border-bottom:1px solid rgb(142, 142, 142);
+  padding-left: 10px;
+}
+
+#navigation {
+  border-right:1px solid rgb(142, 142, 142);
+}
+
+#mainnavigation li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 10px;
+}

@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+{% block title %}View Entry{% endblock %}
+{% block navigation %}
+    {% include '::navigation.auth.html.twig' %}
+{% endblock %}
+
+{% block body -%}
+    <h1>#{{ entity.id }} - {{ entity.title }}</h1>
+    <a href="{{ path('entry_edit', { 'id': entity.id }) }}"> Edit entry</a> - <span>Last modified: {{ entity.lastmodified|date('Y-m-d H:i:s') }}</span>
+    <hr>
+    <div>
+        {{ entity.parseMarkdown()|raw }}
+    </div>
+{% endblock %}

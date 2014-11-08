@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% stylesheets  '@GehaxeltSyMDWikiBundle/Resources/public/css/*.css' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div id="header" class="row">
+            <div class="col-md-3 col-xs-height">
+                <h1>SyMDWiki</h1>
+            </div>
+            <div class="col-md-9 col-xs-height">
+                {% if app.user %}
+                    <ul id="mainnavigation">
+                        <li><a href="{{ url('index') }}">Overview</a></li>
+                        <li><a href="{{ url('entry_new') }}">New entry</a></li>
+                        <li><a href="{{ url('log') }}">View Log</a></li>
+                        <li><a href="{{ url('logout') }}">Logout</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row row-xs-height">
+            <div id="navigation" class="col-md-2 col-xs-height">
+                {% block navigation %}
+                {% endblock %}
+            </div>
+            <div class="col-md-10 col-xs-height">
+                <div id="container">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        {% javascripts '@GehaxeltSyMDWikiBundle/Resources/public/js/*' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
     </body>
 </html>

@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{% block title %}Delete Entry{% endblock %}
+{% block navigation %}
+    {% include '::navigation.auth.html.twig' %}
+{% endblock %}
+
+{% block body -%}
+  <h1>Delete #{{ entity.id }} - {{ entity.title }}?</h1>
+  <hr>
+  {{ form(delete_form) }}
+{% endblock %}

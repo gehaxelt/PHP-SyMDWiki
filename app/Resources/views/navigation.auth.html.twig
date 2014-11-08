@@ -1,0 +1,6 @@
+<h2>Quick nav</h2>
+<ul>
+  {% for entry in navigation.getLastModified() %}
+    <li><a href=" {{ path('entry_show', {'id': entry.id}) }}">#{{ entry.id }} - {{ entry. title }}</a></li>
+  {% endfor %}
+</ul>

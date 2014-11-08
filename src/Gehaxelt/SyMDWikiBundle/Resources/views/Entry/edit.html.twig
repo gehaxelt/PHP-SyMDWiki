@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+{% block title %}Edit Entry{% endblock %}
+{% block navigation %}
+    {% include '::navigation.auth.html.twig' %}
+{% endblock %}
+
+{% block body -%}
+    <h1>Edit #{{ entity.id }} - {{ entity.title }}</h1>
+    <a href="{{ path('entry_delete_form', {'id': entity.id}) }}">Delete</a> 
+    <a href="{{ path('entry_show', {'id': entity.id}) }}">View</a>
+    <hr>
+    {{ form(edit_form, {'attr' : {'role': 'form', 'class':'form-horizontal'}}) }}
+{% endblock %}
