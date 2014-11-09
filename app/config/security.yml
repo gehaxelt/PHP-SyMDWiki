@@ -13,7 +13,9 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
+        publicarea:
+          pattern: ^/public
+          anonymous: true
         loginarea:
           pattern: ^/login$
           anonymous: ~

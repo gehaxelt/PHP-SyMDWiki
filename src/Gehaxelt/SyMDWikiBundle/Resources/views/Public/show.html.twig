@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+{% block title %}View public Entry{% endblock %}
+
+{% block body -%}
+    <h1>#{{ entity.id }} - {{ entity.title }}</h1>
+    <span>Last modified: {{ entity.lastmodified|date('Y-m-d H:i:s') }}</span>
+    <hr>
+    <div>
+        {{ entity.parseMarkdown()|raw }}
+    </div>
+{% endblock %}

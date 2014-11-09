@@ -29,6 +29,11 @@
         <div class="row row-xs-height">
             <div id="navigation" class="col-md-2 col-xs-height">
                 {% block navigation %}
+                    <h2>Public</h2>
+                    <ul>
+                        <li><a href="{{ url('public') }}">Public content</a></li>
+                        <li><a href="{{ url('index') }}">Login</a></li>
+                    </ul>
                 {% endblock %}
             </div>
             <div class="col-md-10 col-xs-height">
