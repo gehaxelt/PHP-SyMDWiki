@@ -6,10 +6,17 @@ SyMDWiki - Symfony Markdown Wiki is a small markdown-flavored wiki.
 
 - Markdown syntax
 - Activity log
+- Display order (higher ```sortid``` means higher priority)
 
 #Installation
 
 - Clone the repository ```git clone ... ``
+- Install comphoser ```curl -sS https://getcomposer.org/installer | php```
+- Create the database ```php app/console --env=prod doctrine:schema:create ``
+- Update the database if necessary ``php app/console --env=prod doctrine:schema:update --force```
+- Generate static assets: ```php app/console --env=prod assetic:dump```
+- Install assets: ```php app/console --env=prod assets:install web```
+- Make sure that the cache directory is writeable ```chmod -R +w app/cache/```
 - Install dependencies ```php composer.phar install```
 - Point your webserver to the /web directory ```DocumentRoot /var/www/SyMDWiki/web```
 - Have fun!
