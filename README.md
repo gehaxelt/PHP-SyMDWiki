@@ -7,6 +7,7 @@ SyMDWiki - Symfony Markdown Wiki is a small markdown-flavored wiki.
 - Markdown syntax
 - Activity log
 - Display order (higher ```sortid``` means higher priority)
+- Public content section
 
 #Installation
 
@@ -23,11 +24,12 @@ SyMDWiki - Symfony Markdown Wiki is a small markdown-flavored wiki.
 
 #Screenshots
 
-- ![Login area](http://i.imgur.com/ZDNiTSS.png)
-- ![Overview](http://i.imgur.com/rYES5s1.png)
-- ![Entry](http://i.imgur.com/NRyzOov.png)
-- ![Edit entry](http://i.imgur.com/1xBI7IB.png)
-- ![Log](http://i.imgur.com/F9S17Og.png)
+- Login area: ![Login area](http://i.imgur.com/ZDNiTSS.png)
+- Overview: ![Overview](http://i.imgur.com/rYES5s1.png)
+- Entry: ![Entry](http://i.imgur.com/NRyzOov.png)
+- Edit: ![Edit entry](http://i.imgur.com/1xBI7IB.png)
+- Logs: ![Log](http://i.imgur.com/F9S17Og.png)
+- Public area: ![Public area](http://i.imgur.com/wohMCLH.png)
 
 #Licese
 
