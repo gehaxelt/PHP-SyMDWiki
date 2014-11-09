@@ -49,11 +49,19 @@ class Entry
      */
     private $sortid;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="public", type="boolean", )
+     */
+    private $public;
+
 
     public function __construct() {
         $this->sortid = 0;
         $this->content = "";
         $this->lastmodified = new \DateTime();
+        $this->public = false;
     }
 
     /**
@@ -162,5 +170,28 @@ class Entry
     {
         $parsedown = new \Parsedown();
         return $parsedown->text($this->content);
+    }
+
+    /**
+     * Set public
+     *
+     * @param boolean $public
+     * @return Entry
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+
+        return $this;
+    }
+
+    /**
+     * Get public
+     *
+     * @return boolean 
+     */
+    public function getPublic()
+    {
+        return $this->public;
     }
 }
