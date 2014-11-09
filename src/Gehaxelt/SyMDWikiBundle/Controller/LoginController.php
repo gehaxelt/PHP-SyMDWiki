@@ -31,7 +31,7 @@ class LoginController extends Controller
       {
           $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
           $session->remove(SecurityContext::AUTHENTICATION_ERROR);
-          $logger->log(Log::WARN,'Failed login');
+          // $logger->log(Log::WARN,'Failed login');
       }
        
       return array(
