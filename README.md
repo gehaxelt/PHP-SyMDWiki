@@ -10,9 +10,9 @@ SyMDWiki - Symfony Markdown Wiki is a small markdown-flavored wiki.
 
 #Installation
 
-- Clone the repository ```git clone ... ``
+- Clone the repository ```git clone https://github.com/gehaxelt/PHP-SyMDWiki.git ```
 - Install comphoser ```curl -sS https://getcomposer.org/installer | php```
-- Create the database ```php app/console --env=prod doctrine:schema:create ``
+- Create the database ```php app/console --env=prod doctrine:schema:create ```
 - Update the database if necessary ``php app/console --env=prod doctrine:schema:update --force```
 - Generate static assets: ```php app/console --env=prod assetic:dump```
 - Install assets: ```php app/console --env=prod assets:install web```
