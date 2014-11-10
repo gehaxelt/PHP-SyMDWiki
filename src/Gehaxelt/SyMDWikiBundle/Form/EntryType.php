@@ -17,7 +17,7 @@ class EntryType extends AbstractType
         $builder
             ->add('title','text',array('attr' => array('class' => 'form-control')))
             ->add('sortid','text',array('attr' => array('class' => 'form-control')))
-            ->add('public','checkbox',array('attr' => array('class' => 'checkbox')))
+            ->add('public','checkbox',array('attr' => array('class' => 'checkbox'), 'required' => false))
             ->add('content','textarea',array('attr'=> array('class' => 'form-control', 'rows' => 50)))
         ;
     }
